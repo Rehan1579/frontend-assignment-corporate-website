@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* raw palette */
+  --clr-brown-900: #4b2615;
+  --clr-brown-700: #643f2e;
+  --clr-white: #ffffff;
+  --clr-white-80: rgb(255 255 255 / 80%);
+  --clr-white-60: rgb(255 255 255 / 60%);
+  --clr-gray-50: #f3f3f3;
+  --clr-gray-900: #1e1e1e;
+  --clr-black: #000000;
+
+  /* semantic tokens */
+  --BG-LIGHT: var(--clr-gray-50);
+  --BG-DARK: var(--clr-brown-900);
+  --BG-DARK-SHADE: var(--clr-brown-700);
+
+  --TXT-LIGHT: var(--clr-gray-900);
+  --TXT-BRAND: var(--clr-brown-900);
+  --TXT-STRONG: var(--clr-black);
+
+  --TXT-ON-DARK: var(--clr-white);
+  --TXT-ON-DARK-MUTED: var(--clr-white-80);
+  --TXT-ON-DARK-SUBTLE: var(--clr-white-60);
+
+  --ICON-LIGHT: var(--clr-black);
+  --ICON-ON-DARK: var(--clr-white);
+
+  --BTN-PRIMARY-BG: var(--clr-brown-900);
+  --BTN-PRIMARY-TXT: var(--clr-white);
+  --BTN-PRIMARY-HOVER: var(--clr-brown-700);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-frame {
+  min-height: 100vh;
+}
+
+.section-shell {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.5rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.text-display {
+  font-family: var(--font-display), serif;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-inline: 3rem;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "header": {
+    "home": "الرئيسية",
+    "aboutUs": "من نحن",
+    "services": "الخدمات",
+    "blogs": "المدونات",
+    "ourTeam": "فريقنا",
+    "contactUs": "تواصل معنا",
+    "bookAppointment": "احجز موعدًا",
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "footer": {
+    "subscribePlaceholder": "البريد الإلكتروني",
+    "subscribeLabel": "اشترك",
+    "contactsLabel": "جهات الاتصال",
+    "subscribed": "تم الاشتراك بنجاح.",
+    "alreadySubscribed": "أنت مشترك مسبقًا.",
+    "subscribeRequired": "يرجى إدخال بريدك الإلكتروني.",
+    "subscribeInvalid": "يرجى إدخال بريد إلكتروني صحيح.",
+    "copyright": "© 2026. جميع الحقوق محفوظة.",
+    "navigation": {
+      "about": "من نحن",
+      "ourStrategy": "استراتيجيتنا",
+      "ourAdvantages": "مزاياَنا",
+      "socialResponsibility": "المسؤولية الاجتماعية",
+      "ourServices": "خدماتنا"
+    },
+    "social": {
+      "twitter": "تويتر",
+      "facebook": "فيسبوك",
+      "google": "جوجل"
+    }
+  },
+  "appError": {
+    "title": "حدث خطأ ما",
+    "description": "تعذر تحميل هذه الصفحة الآن.",
+    "tryAgain": "حاول مرة أخرى"
+  }
+}

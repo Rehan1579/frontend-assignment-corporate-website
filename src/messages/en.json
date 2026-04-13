@@ -1,0 +1,40 @@
+{
+  "header": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "services": "Services",
+    "blogs": "Blogs",
+    "ourTeam": "Our Team",
+    "contactUs": "Contact us",
+    "bookAppointment": "Book Appointment",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "footer": {
+    "subscribePlaceholder": "Email",
+    "subscribeLabel": "Subscribe",
+    "contactsLabel": "Contacts",
+    "subscribed": "You have been subscribed.",
+    "alreadySubscribed": "You are already subscribed.",
+    "subscribeRequired": "Please enter your email.",
+    "subscribeInvalid": "Please enter a valid email address.",
+    "copyright": "© 2026. All rights reserved.",
+    "navigation": {
+      "about": "About",
+      "ourStrategy": "Our Strategy",
+      "ourAdvantages": "Our Advantages",
+      "socialResponsibility": "Social Responsibility",
+      "ourServices": "Our Services"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "facebook": "Facebook",
+      "google": "Google"
+    }
+  },
+  "appError": {
+    "title": "Something went wrong",
+    "description": "We could not load this page right now.",
+    "tryAgain": "Try Again"
+  }
+}
