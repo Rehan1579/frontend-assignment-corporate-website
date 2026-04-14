@@ -16,6 +16,7 @@ export function HomeView(props: HomeViewProps) {
       <HeroCarousel slides={content.heroSlides} isRtl={isRtl} />
       <OurTeamSection content={content.ourTeam} isRtl={isRtl} />
       <CustomersSection content={content.customers} isRtl={isRtl} />
+      <div className="h-[25px] w-full bg-(--BG-LIGHT)" />
     </>
   );
 }

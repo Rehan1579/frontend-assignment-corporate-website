@@ -25,7 +25,6 @@ export async function Footer() {
 
   return (
     <footer className="bg-(--BG-DARK)">
-      <div className="h-[25px] w-full bg-[#FAFAFA]" />
       <Container>
         <div className="bg-(--BG-DARK) px-5 py-9 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-end">

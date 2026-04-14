@@ -3,6 +3,7 @@
 import { ChevronDown } from "lucide-react";
 import { ChangeEvent } from "react";
 import { useLocale } from "next-intl";
+import { useSearchParams } from "next/navigation";
 
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { HeaderLanguageOption } from "@/types";
@@ -17,6 +18,7 @@ export function HeaderLanguageMenu(props: HeaderLanguageMenuProps) {
   const currentLocale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleLocaleChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = event.target.value;
@@ -25,7 +27,12 @@ export function HeaderLanguageMenu(props: HeaderLanguageMenuProps) {
       return;
     }
 
-    router.replace(pathname, { locale: nextLocale });
+    const nextSearchParams = new URLSearchParams(searchParams.toString());
+    const nextPath = nextSearchParams.size
+      ? `${pathname}?${nextSearchParams.toString()}`
+      : pathname;
+
+    router.replace(nextPath, { locale: nextLocale });
   };
 
   return (

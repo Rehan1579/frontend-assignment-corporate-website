@@ -29,7 +29,7 @@ export default async function LocaleLayout(props: LocaleLayoutProps) {
     <NextIntlClientProvider locale={locale} messages={messages}>
       <div className="site-frame flex min-h-screen flex-col">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
       </div>
     </NextIntlClientProvider>

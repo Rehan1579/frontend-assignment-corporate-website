@@ -15,14 +15,14 @@
     "subscribeLabel": "اشترك",
     "contactsLabel": "جهات الاتصال",
     "subscribed": "تم الاشتراك بنجاح.",
-    "alreadySubscribed": "أنت مشترك مسبقًا.",
+    "alreadySubscribed": "أنت مشترك بالفعل.",
     "subscribeRequired": "يرجى إدخال بريدك الإلكتروني.",
     "subscribeInvalid": "يرجى إدخال بريد إلكتروني صحيح.",
     "copyright": "© 2026. جميع الحقوق محفوظة.",
     "navigation": {
       "about": "من نحن",
       "ourStrategy": "استراتيجيتنا",
-      "ourAdvantages": "مزاياَنا",
+      "ourAdvantages": "مزايانا",
       "socialResponsibility": "المسؤولية الاجتماعية",
       "ourServices": "خدماتنا"
     },
@@ -36,5 +36,8 @@
     "title": "حدث خطأ ما",
     "description": "تعذر تحميل هذه الصفحة الآن.",
     "tryAgain": "حاول مرة أخرى"
+  },
+  "search": {
+    "noResults": "لم يتم العثور على نتائج."
   }
 }

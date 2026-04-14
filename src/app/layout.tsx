@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { headers } from "next/headers";
 
 import { routing } from "@/i18n/routing";
-import { isRtlLocale } from "@/lib";
+import { Utils } from "@/lib";
 
 import "./globals.css";
 
@@ -34,7 +34,7 @@ export default async function RootLayout(props: RootLayoutProps) {
   const requestHeaders = await headers();
   const locale =
     requestHeaders.get("X-NEXT-INTL-LOCALE") ?? routing.defaultLocale;
-  const direction = isRtlLocale(locale) ? "rtl" : "ltr";
+  const direction = Utils.isRtlLocale(locale) ? "rtl" : "ltr";
 
   return (
     <html

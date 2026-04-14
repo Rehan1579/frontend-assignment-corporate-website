@@ -18,9 +18,11 @@ import { HeaderCta } from "./header-cta";
 import { HeaderLanguageMenu } from "./header-language-menu";
 import { HeaderNav } from "./header-nav";
 import { HeaderSearchButton } from "./header-search-button";
+import { HeaderSearchForm } from "./header-search-form";
 
 export function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const t = useTranslations("header");
 
@@ -53,28 +55,45 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-colors duration-200 ${
-        isScrolled || isServicesOpen ? "bg-[var(--BG-DARK)]" : "bg-transparent"
+        isScrolled || isServicesOpen || isSearchOpen
+          ? "bg-[var(--BG-DARK)]"
+          : "bg-transparent"
       }`}
     >
       <Container className="flex items-center gap-4 py-4 lg:gap-6">
-        <Link href="/" className="shrink-0">
+        <Link
+          href="/"
+          className="shrink-0"
+          onClick={() => setIsSearchOpen(false)}
+        >
           <BrandMark />
         </Link>
 
-        <HeaderNav
-          links={translatedNavigationLinks}
-          services={headerServices}
-          isServicesOpen={isServicesOpen}
-          onServicesToggle={() => setIsServicesOpen((current) => !current)}
-          onServicesOpen={() => setIsServicesOpen(true)}
-          onServicesClose={() => setIsServicesOpen(false)}
-        />
+        {isSearchOpen ? (
+          <HeaderSearchForm onClose={() => setIsSearchOpen(false)} />
+        ) : (
+          <>
+            <HeaderNav
+              links={translatedNavigationLinks}
+              services={headerServices}
+              isServicesOpen={isServicesOpen}
+              onServicesToggle={() => setIsServicesOpen((current) => !current)}
+              onServicesOpen={() => setIsServicesOpen(true)}
+              onServicesClose={() => setIsServicesOpen(false)}
+            />
 
-        <div className="ms-auto hidden items-center gap-2 lg:flex">
-          <HeaderSearchButton />
-          <HeaderLanguageMenu languages={translatedLanguages} />
-          <HeaderCta label={t("bookAppointment")} />
-        </div>
+            <div className="ms-auto hidden items-center gap-2 lg:flex">
+              <HeaderSearchButton
+                onClick={() => {
+                  setIsServicesOpen(false);
+                  setIsSearchOpen(true);
+                }}
+              />
+              <HeaderLanguageMenu languages={translatedLanguages} />
+              <HeaderCta label={t("bookAppointment")} />
+            </div>
+          </>
+        )}
       </Container>
     </header>
   );

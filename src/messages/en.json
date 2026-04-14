@@ -36,5 +36,8 @@
     "title": "Something went wrong",
     "description": "We could not load this page right now.",
     "tryAgain": "Try Again"
+  },
+  "search": {
+    "noResults": "No results found."
   }
 }

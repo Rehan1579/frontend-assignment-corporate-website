@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { isRtlLocale } from "@/lib";
+import { Utils } from "@/lib";
 import { ServicesService } from "@/services";
 import { ServiceDetailView } from "@/ui/views";
 
@@ -14,7 +14,7 @@ interface ServiceDetailRouteProps {
 export default async function ServiceDetailRoute(props: ServiceDetailRouteProps) {
   const { params } = props;
   const { locale, slug } = await params;
-  const isRtl = isRtlLocale(locale);
+  const isRtl = Utils.isRtlLocale(locale);
   const service = await ServicesService.getServiceDetailBySlug(locale, slug);
 
   if (!service) {
